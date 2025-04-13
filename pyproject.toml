@@ -1,0 +1,20 @@
+[project]
+name = "zwndng"
+version = "0.1.0"
+description = "Add your description here"
+# readme = "README.md"
+authors = [
+    { name = "Jan Christian Grünhage", email = "jan.christian@gruenhage.xyz" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "dataclass-wizard[yaml]>=0.35.0",
+    "typer>=0.15.2",
+]
+
+[project.scripts]
+zwndng = "zwndng.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

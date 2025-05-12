@@ -1,19 +1,19 @@
 from dataclasses import dataclass
 from dataclass_wizard import JSONWizard, Pattern
 from datetime import date
-from typing import Annotated
+from typing import Annotated, Literal
 
 
 @dataclass
 class Spender:
     name: str
-    address: str
+    adresse: str
 
 
 @dataclass
 class Geld:
     datum: Annotated[date, Pattern("%y-%m-%d")]
-    art: str
+    art: Literal["Geldzuwendung", "Mitgliedsbeitrag"]
     verzicht: bool
     betrag: float
 
@@ -38,6 +38,8 @@ class Sache:
     wert: float
     wertermittlung: bool
     privatvermögen: bool
+    betriebsvermögen: bool
+    beschreibung: str
 
 
 @dataclass

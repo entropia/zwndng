@@ -1,6 +1,8 @@
+from pathlib import Path
+
 from dataclass_wizard import YAMLWizard
 from dataclasses import dataclass
-from typing import Optional
+from typing import Optional, TextIO
 
 
 @dataclass
@@ -13,12 +15,14 @@ class Config(YAMLWizard, key_transform="SNAKE"):
     veranlagungszeitraum: str
     vereinszweck: str
     ort: str
+    unterschrift_bild: Path
 
 
 @dataclass
 class ZwndngContext:
-    input: Optional[str] = None
+    input: Optional[Path | TextIO] = None
     config: Optional[Config] = None
+    output: Optional[Path] = None
 
 
 ctx = ZwndngContext()

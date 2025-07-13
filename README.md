@@ -11,7 +11,7 @@
 ## Installation
 
 ```bash
-pipx install git+https://github.com/entropia/zwndng.git
+uv tool install git+https://github.com/entropia/zwndng.git
 ```
 
 ## Konfiguration

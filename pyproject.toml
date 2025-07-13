@@ -14,7 +14,7 @@ dependencies = [
     "dataclass-wizard[yaml]==0.35.0",
     "num2words==0.5.14",
     "pymupdf==1.25.5",
-    "typer==0.15.3"
+    "typer==0.16.0"
 ]
 
 [project.scripts]
